@@ -1,0 +1,37 @@
+:root {
+    --main-color: #80db66;
+    --primary-color: #25262f;
+    --secondary-color: #e2ecf6;
+    --text-color: #4d4d5c;
+    --meta-text-color: #9b9db1;
+    --section-bg: #e2ecf6;
+    --main-border: #bcc7d3;
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+   
+}
+
+.home-bg {
+    position: relative; 
+    background-image: url('/static/images/bghome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+
+span{
+    color: #80db66;
+}
+
+
+header a:hover{
+    color: #80db66 !important;
+}
+
+
