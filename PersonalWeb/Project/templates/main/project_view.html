@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+{% block content %}
+
+{% block title %}
+Projects
+{% endblock %}
+
+<body class="" style="margin: 200px;">
+
+    <h1>Welcome to the Project Management Page</h1>
+    <ul>
+        <li><a href="{% url 'Project:project_view' %}">View Projects</a></li>
+        <li><a href="{% url 'Project:add_project' %}">Add New Project</a></li>
+    </ul>
+
+    <h1>Projects List</h1>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.description }}</p>
+                <a href="{{ project.github_link }}">GitHub Link</a>
+                <br>
+                <a href="{% url 'Project:update_project' project.id %}">Update</a>
+                <a href="{% url 'Project:delete_project' project.id %}">Delete</a>
+            </li>
+        {% empty %}
+            <p>No projects found.</p>
+        {% endfor %}
+    </ul>
+</body>
+
+{% endblock %}
+
