@@ -5,85 +5,143 @@
 {% endblock %}
 
 {% load static %}
+{%block header%}
+<li><a href="#profile" class="nav-link text-white">Profile</a></li>
+<li><a href="#Contact" class="nav-link text-white">Contact</a></li>
+{%endblock%}
 {% block content %}
 
 
-    
-<div class="" style="margin: 12rem; width: 20rem;">
-  <div class="card-body">
-    
-    <h5 class="card-title text-white h1"> I<span>'</span>M </h5>
-    <p class="text-white h1"><span>Abdullah ALAtiq</span></p>
-    <a href="" class="btn btn-success">Download CV</a>
-  </div>
-</div>
 
+<div class="row d-flxe flex-wrap">
  
 
-
-
-<div class="d-flxe flex-column flex-wrap justify-content-center p-5 bg-dark">
-  <div class="row text-center py-5 ">
-    <div class="col-md-3 col-sm-6 mb-4 ">
-      <div class="card shadow-sm">
-        <img src="{% static 'images/icon1.png' %}" alt="icon1" class="card-img-top" style="width: 50px; height: 50px; margin: 0 auto;">
-        <div class="card-body">
-          <h5 class="card-title">Dedication</h5><hr>
-          <p class="card-text"  style="text-align: left;">I am a dedicated individual committed to the highest quality standards in everything I do. I work diligently and persistently to achieve objectives and put forth my best effort to deliver outstanding results, even in the face of challenges.</p>
-        </div>
+  <div class="row home-bg" style="height: 700px;">
+    <div class="col-6" style="margin: 12rem 5rem 5rem 12rem; width: 30rem ">
+      <div class="card-body">
+        <h1 class="card-title text-white " style="font-size: 70px;"> I<span>'</span>M </h1>
+        <h1 class="text-white " style="font-size: 70px;"><span>Abdullah ALAtiq</span></h1>
+        <a Download href="{% static 'pdf/AbdullahAtiq.pdf' %}" class="btn btn-success">Download CV</a>
       </div>
     </div>
-
-    <div class="col-md-3 col-sm-6 mb-4 mt-5">
-      <div class="card shadow-sm">
-        <img src="{% static 'images/icon2.png' %}" alt="icon2" class="card-img-top" style="width: 50px; height: 50px; margin: 0 auto;">
-        <div class="card-body">
-          <h5 class="card-title">Problem Solving</h5><hr>
-          <p class="card-text"  style="text-align: left;">I have the ability to analyze complex problems and identify effective solutions using critical and creative thinking. I approach challenges calmly and always look for innovative and swift solutions that contribute to overall performance improvement.</p>
-        </div>
+    <div class="col-6" style="margin: 12rem 0rem 5rem 1rem; width: 30rem ">
+      <div class="card-body">
+        <div style="position: relative; width: 400px; height: 400px; border-radius: 50%;">
+          <img src="{% static 'images/bgh8.jpg' %}" alt="img" style="border-radius: 50%; width: 100%; height: 100%;">
+      
+          <div style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              background-color: rgba(0, 0, 0, 0.7); /* لون مائل للأخضر مع شفافية */
+          ">
+          </div>
       </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 mb-4">
-      <div class="card shadow-sm">
-        <img src="{% static 'images/icon3.png' %}" alt="icon3" class="card-img-top" style="width: 50px; height: 50px; margin: 0 auto;">
-        <div class="card-body">
-          <h5 class="card-title">Collaboration</h5><hr>
-          <p class="card-text"  style="text-align: left;">I possess strong collaboration skills and believe that exchanging ideas and expertise within a team enhances creativity and achieves better results. I work effectively with colleagues to achieve common goals in a spirit of cooperation and mutual respect.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 mb-4 mt-5">
-      <div class="card shadow-sm">
-        <img src="{% static 'images/icon4.png' %}" alt="icon4" class="card-img-top" style="width: 50px; height: 50px; margin: 0 auto;">
-        <div class="card-body">
-          <h5 class="card-title">Technology</h5><hr>
-          <p class="card-text"  style="text-align: left;">I am a dedicated individual committed to the highest quality standards in everything I do. I work diligently and persistently to achieve objectives and put forth my best effort to deliver outstanding results, even in the face of challenges.</p>
-        </div>
       </div>
     </div>
   </div>
-</div>
+  
 
 
 
- 
-<div class="container">
-  <div class="row align-items-center d-flex justify-content-center mt-5">
-    <div class="col-sm-6">
-    img
+  <div class="img2 d-flex flex-row flex-wrap justify-content-center p-5 ">
+    <div class="row text-center py-5 ">
+      <div class="col-md-3 col-sm-6 mb-4 ">
+        <div class="card shadow-sm">
+          <img src="{% static 'images/icon1.png' %}" alt="icon1" class="card-img-top" style="width: 50px; height: 50px; margin: 0 auto;">
+          <div class="card-body">
+            <h5 class="card-title">Dedication</h5><hr>
+            <p class="card-text"  style="text-align: left;">I am a dedicated individual committed to the highest quality standards in everything I do. I work diligently and persistently to achieve objectives and put forth my best effort to deliver outstanding results, even in the face of challenges.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4 mt-5">
+        <div class="card shadow-sm">
+          <img src="{% static 'images/icon2.png' %}" alt="icon2" class="card-img-top" style="width: 50px; height: 50px; margin: 0 auto;">
+          <div class="card-body">
+            <h5 class="card-title">Problem Solving</h5><hr>
+            <p class="card-text"  style="text-align: left;">I have the ability to analyze complex problems and identify effective solutions using critical and creative thinking. I approach challenges calmly and always look for innovative and swift solutions that contribute to overall performance improvement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'images/icon3.png' %}" alt="icon3" class="card-img-top" style="width: 50px; height: 50px; margin: 0 auto;">
+          <div class="card-body">
+            <h5 class="card-title">Collaboration</h5><hr>
+            <p class="card-text"  style="text-align: left;">I possess strong collaboration skills and believe that exchanging ideas and expertise within a team enhances creativity and achieves better results. I work effectively with colleagues to achieve common goals in a spirit of cooperation and mutual respect.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4 mt-5">
+        <div class="card shadow-sm">
+          <img src="{% static 'images/icon4.png' %}" alt="icon4" class="card-img-top" style="width: 50px; height: 50px; margin: 0 auto;">
+          <div class="card-body">
+            <h5 class="card-title">Technology</h5><hr>
+            <p class="card-text"  style="text-align: left;">I am a dedicated individual committed to the highest quality standards in everything I do. I work diligently and persistently to achieve objectives and put forth my best effort to deliver outstanding results, even in the face of challenges.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6">
-    <h1>Profile</h1></a><hr>
-      <p class="fs-5">
-        An Information System looking to work in an environment that promotes self
-        and professionaldevelopment and to utilize my abilities to contribute towards
+  </div>
+
+
+
+  
+  <div class="container" id="profile">
+    <div class="row flex-wrap align-items-center d-flex justify-content-center" >
+      <div class="col-sm-6">
+      <img src="/static/images/pexels7.jpg" alt="image" style="border-radius: 15px; height: 700px; width: 600px; margin: 200px 20px;" >
+      </div>
+      <div class="col-sm-6">
+      <h1>PROFILE</h1><hr>
+        <p class="fs-4">
+          An Information System looking to work in an environment 
+          that promotes self and professionaldevelopment and to utilize 
+          my abilities to contribute towards 
           the organization's growth andachievement.
-      </p>
+        </p><br>
+        <h1>EDUCATION</h1><hr><br>
+        <p class="fs-4"  id="Contact">
+          Bachelor of Information Systems
+          <br>King Saud University
+        </p>
+        <br>
+        <h1>CONTACT</h1><hr><br>
+        <p class="fs-4">Email: Abdullah.s.alatiq@gamil.com</p>
+        <p class="fs-4">Phone: 0555139935</p>
+      </div>
+    </div>
+  <div>
+
+</div>
+
+<div class="container">
+  <h1>COURESES</h1><hr>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+  {% for course in courses %}
+  <div class="col-6">
+    <div class="card">
+      <img src="{{ course.certificate_image.url }}" class="card-img-top" style="width: 100%; height: 300px;" alt="image">
+      <div class="card-body">
+        <h4 class="card-title">{{ course.name }}</h4>
+        <h6>{{ course.academy }}</h6>
+        <h6>{{ course.description }}</h6>
+        <h6>{{ course.start_date }}</h6>
+        <h6>{{ course.end_date }}</h6>
+      </div>
     </div>
   </div>
-<div>
+  {%endfor%}
+</div>
+  
 
 
 {% endblock %}
+

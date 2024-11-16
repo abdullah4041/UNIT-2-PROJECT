@@ -1,36 +1,43 @@
 {% extends "main/base.html" %}
 
 {% load static %}
+{% block title %} Projects {% endblock %}
+
+
 {% block content %}
 
-{% block title %}
-Projects
-{% endblock %}
 
-<body class="" style="margin: 200px;">
-
-    <h1>Welcome to the Project Management Page</h1>
-    <ul>
-        <li><a href="{% url 'Project:project_view' %}">View Projects</a></li>
-        <li><a href="{% url 'Project:add_project' %}">Add New Project</a></li>
-    </ul>
+<body style="margin: 200px;">
 
     <h1>Projects List</h1>
-    <ul>
-        {% for project in projects %}
-            <li>
-                <h3>{{ project.name }}</h3>
-                <p>{{ project.description }}</p>
-                <a href="{{ project.github_link }}">GitHub Link</a>
-                <br>
-                <a href="{% url 'Project:update_project' project.id %}">Update</a>
-                <a href="{% url 'Project:delete_project' project.id %}">Delete</a>
-            </li>
-        {% empty %}
-            <p>No projects found.</p>
+    <table class="table" id="dataTable" style = ' width: 100% auto; margin-bottom: 50px;'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>GitHub Link</th>
+                <th>File</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+            <tr>
+                <td>{{ project.name }}</td>
+                <td>{{ project.description }}</td>
+                <td><a href="{{ project.github_link }}"><img src="{% static 'images/github.png' %}" alt="github" style="width: 25px; height: 25px"></a></td>
+                <td><a Download href="{{ project.project_file }}"><img src="{% static 'images/folder.png' %}" alt="folder" style="width: 25px; height: 25px"></a></td>
+            </tr>
         {% endfor %}
-    </ul>
+        </tbody>
+    </table>
+
+    
+
 </body>
 
 {% endblock %}
 
+{% block footer %}
+<footer >
+</footer>
+{% endblock %}

@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="home-bg">
+<body>
 
   <div class="fas fa-container-storage">
     <header class="d-flex flex-wrap fixed-top justify-content-center py-3 mb-4 bg-dark">
@@ -24,11 +24,12 @@
             <img src="{% static 'images/Logo.png' %}" alt="Logo" class="fs-4 d-flex align-items-center mb-3 mb-md-0 me-md-auto"  style="height: 40px; width: 40px;">
             <ul class="nav nav-pills">
                 <li><a href="/" class="nav-link text-white">Home</a></li>
-                <li><a href="#profile" class="nav-link text-white">Profile</a></li>
+                {%block header%}
+        
+                {%endblock%}
                 <li><a href="{% url 'Project:project_view' %}" class="nav-link text-white">Project</a></li>
-                <li><a href="" class="nav-link text-white">Contact</a></li>
-                <li><a href="{% url 'dashboard:dashboard_view' %}" class="nav-link text-white">dashboard</a></li>
-                <li><a href="{% url 'Courses:courses_view' %}" class="nav-link text-white">Courses</a></li>
+                <!--<li><a href="{% url 'dashboard:dashboard_view' %}" class="nav-link text-white">dashboard</a></li>-->
+                <!--<li><a href="{% url 'Courses:courses_view' %}" class="nav-link text-white">Courses</a></li>-->
             </ul>
         </div>
     </header>
@@ -42,12 +43,15 @@
     {% endblock %}
   </main>
 
-
-  <footer>
-
+  {% block footer %}
+  <footer class="container-fluid home-bg mt-5" style="height: 100px;">
   </footer>
+  {% endblock %}
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
 
 </body>
 
